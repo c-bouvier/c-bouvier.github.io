@@ -1,0 +1,23 @@
+:root {
+  --background-color: #f0f4f7;
+  --navigation-color: #f17351;
+  --link-color: #54467f;
+  --border-color: #f17351;
+  --heading-color: #f17351;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: helvetica;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a{ 
+	color: var(--link-color);
+}
+
+b{ 
+	color: var(--heading-color);
+}
