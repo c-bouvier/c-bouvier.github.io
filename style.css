@@ -22,7 +22,7 @@ b{
   color: var(--heading-color);
 }
 
-h0{
+h1{
     font-size:300%;
     font-weight: bold;
     margin-top: 80px;
@@ -32,7 +32,7 @@ h0{
     color: var(--heading-color);
 }
 
-h1{
+h0{
     font-size:250%;
     font-weight: bold;
     margin-top: 80px;
@@ -59,4 +59,22 @@ ul{
 
 .cont{
   margin: 0px 20px;
+}
+
+.background {
+	background: #425b73;
+}
+
+.d0{
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	background: var(--background-color);
+}
+
+.d1{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
 }
