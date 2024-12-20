@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clémence Bouvier</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="style.css"/>
+    <script>
+		function visibilite(thingId)
+		{
+		var targetElement;
+		targetElement = document.getElementById(thingId) ;
+		if (targetElement.style.display == "none")
+		{
+		targetElement.style.display = "" ;
+		} else {
+		targetElement.style.display = "none" ;
+		}
+		}
+		</script>
+</head>
+<body>
+    <div class="container-wrapper">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="research.html">Research</a>
+            <div class="dropdown-content">
+                <a href="research-publis.html">Publications</a>
+                <a href="research-talks.html">Talks</a>
+                <a href="research-awards.html">Awards and Prizes</a>
+                <a href="research-editorial.html">Editorial Activities</a>
+                <a href="research-defense.html">Defense</a>
+            </div>
+            <a href="teaching.html">Teaching</a>
+            <a href="outreach.html">Outreach</a>
+            <div class="dropdown-content">
+                <a href="outreach-MT180.html">MT180</a>
+                <a href="outreach-women.html">Women in Sciences</a>
+                <a href="outreach-others.html">Other activities</a>
+            </div>
+            <a href="creations.html">Logo creations</a>
+
+            <p class="copyright">© 2024 Clémence Bouvier. All rights reserved.</p>
+        </nav>
+        <main>
+            <header>
+                <h1>Clémence Bouvier</h1>
+                <i>Publications</i>
+                <img src="pictures/butterfly.png" alt="Papillon" style="position: absolute; bottom: 10px; right: 10px; width: 50px; opacity: 0.8;">
+            </header>
+            <section>
+							<h2>International Journals</h2>
+
+								<ul>
+								<li><b>On the Algebraic Degree of Iterated Power Functions</b> - Designs, Codes and Cryptography, 2023<br>
+								<em>Clémence Bouvier, Anne Canteaut and Léo Perrin</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_dcc2022'); return false;" >[abstract]</a>
+								<a href="https://link.springer.com/article/10.1007/s10623-022-01136-x">[Springer]</a>
+								<a href="https://eprint.iacr.org/2022/366.pdf">[ePrint]</a>
+								<div id="abstract_dcc2022" style="display:none;">
+								<br>
+								<p> New symmetric primitives are being designed to address a novel set of
+								design criteria. Instead of being executed on regular processors or smartcards, they
+								are instead intended to be run in abstract settings such as multi-party computations
+								or zero-knowledge proof systems. This implies in particular that these new primitives
+								are described using operations over large finite fields. As the number of such primi-
+								tives grows, it is important to better understand the properties of their underlying
+								operations.<br>
+
+								In this paper, we investigate the algebraic degree of one of the first such block ciphers,
+								namely MiMC. It is composed of many iterations of a simple round function, which
+								consists of an addition and of a low-degree power permutation applied to the full state,
+								usually $x \mapsto x^3$. We show in particular that, while the univariate degree increases
+								predictably with the number of rounds, the algebraic degree (a.k.a multivariate degree)
+								has a much more complex behaviour, and simply stays constant during some rounds.
+								Such plateaus slightly slow down the growth of the algebraic degree.<br>
+
+								We present a full investigation of this behaviour. First, we prove some lower and
+								upper bounds for the algebraic degree of an arbitrary number of iterations of MiMC
+								and of its inverse. Then, we combine theoretical arguments with simulations to prove
+								that the upper bound is tight for up to 16265 rounds. Using these results, we slightly
+								improve the higher-order differential attack presented at Asiacrypt 2020 to cover one
+								or two more rounds. More importantly, our results provide some precise guarantees
+								on the algebraic degree of this cipher, and then on the minimal complexity for a
+								higher-order differential attack.</p>
+								</li><br>
+
+								<li><b>Algebraic Attacks against Some Arithmetization-Oriented Primitives</b> - IACR Transactions on Symmetric Cryptology, 2022(3)<br>
+								<em>Augustin Bariant, Clémence Bouvier, Gaëtan Leurent and Léo Perrin</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_tosc2022'); return false;" >[abstract]</a>
+							  <a href="https://tosc.iacr.org/index.php/ToSC/article/view/9850/9350">[ToSC]</a>
+								<div id="abstract_tosc2022" style="display:none;">
+								<br>
+								<p> Recent advanced Zero-Knowledge protocols, along with other high-level
+								constructions such as Multi-Party Computations (MPC), have highlighted the need
+								for a new type of symmetric primitives that are not optimized for speed on the usual
+								platforms (desktop computers, servers, microcontrollers, RFID tags...), but for their
+								ability to be implemented using arithmetic circuits.<br>
+
+								Several primitives have already been proposed to satisfy this need. In order to
+								enable an efficient arithmetization, they operate over large finite fields, and use round
+								functions that can be modelled using low degree equations. The impact of these
+								properties on their security remains to be completely assessed. In particular, algebraic
+								attacks relying on polynomial root-finding become extremely relevant. Such attacks
+								work by writing the cryptanalysis as systems of polynomial equations over the large
+								field, and solving them with off-the-shelf tools (SageMath, NTL, Magma, ...).
+								The need for further analysis of these new designs has been recently highlighted
+								by the Ethereum Foundation, as it issued bounties for successful attacks against
+								round-reduced versions of several of them.<br>
+
+								In this paper, we show that the security analysis performed by the designers (or
+								challenge authors) of four such primitives is too optimistic, and that it is possible to
+								improve algebraic attacks using insights gathered from a careful study of the round
+								function.<br>
+
+								First, we show that univariate polynomial root-finding can be of great relevance
+								in practice, as it allows us to solve many of the Ethereum Foundation’s challenges
+								on Feistel–MiMC. Second, we introduce a trick to essentially shave off two full
+								rounds at little to no cost for Substitution-Permutation Networks (SPN). This can
+								be combined with univariate (resp. multivariate) root-finding, which allowed to
+								solve some challenges for Poseidon (resp. Rescue–Prime). Finally, we also find an
+								alternative way to set up a system of equations to attack Ciminion, leading to much
+								faster attacks than expected by the designers. </p>
+								</li><br>
+								</ul>
+            </section>
+            <section>
+							<h2>International Conferences with proceedings</h2>
+
+								<ul>
+								<li><b>New Design Techniques for Efficient Arithmetization-Oriented Hash Functions: Anemoi Permutations and Jive Compression Mode</b> - Crypto 2023<br>
+								<em>Clémence Bouvier, Pierre Briaud, Pyrros Chaidos, Léo Perrin, Robin Salen, Vesselin Velichkov and Danny Willems</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_anemoi'); return false;" >[abstract]</a>
+								<a href="https://doi.org/10.1007/978-3-031-38548-3_17">[Springer]</a>
+								<a href="https://eprint.iacr.org/2022/840.pdf">[ePrint]</a>
+								<a href="https://github.com/vesselinux/anemoi-hash/">[GitHub]</a>
+								<a href="https://anemoi-hash.github.io/">[webpage]</a>
+								<div id="abstract_anemoi" style="display:none;">
+								<br>
+								<p> Advanced cryptographic protocols such as Zero-knowledge (ZK) proofs of knowledge, widely used in cryptocurrency applications such as Zcash, Monero, Filecoin, Tezos, Topos, demand new cryptographic hash functions that are efficient not only over the binary field $\mathbb{F}_2$, but also over large fields of prime characteristic $\mathbb{F}_p$. This need has been acknowledged by the wider community and new so-called Arithmetization-Oriented (AO) hash functions have been proposed, e.g. MiMC-Hash, Rescue-Prime, Poseidon, Reinforced Concrete and Griffin to name a few.<br>
+
+								In this paper we propose Anemoi: a new family of ZK-friendly permutations, that can be used to construct efficient hash functions and compression functions. The main features of these algorithms are that 1) they are designed to be efficient within multiple proof systems (e.g. Groth16, Plonk, etc.), 2) they contain dedicated functions optimised for specific applications (namely Merkle tree hashing and general purpose hashing), 3) they have highly competitive performance e.g. about a factor of 2 improvement over Poseidon and Rescue-Prime in terms of R1CS constraints, a 21%-35% Plonk constraint reduction over a highly optimized Poseidon implementation, as well as competitive native performance, running between two and three times faster than Rescue-Prime, depending on the field size.<br>
+
+								On the theoretical side, Anemoi pushes further the frontier in understanding the design principles that are truly entailed by arithmetization-orientation. In particular, we identify and exploit a previously unknown relationship between CCZ-equivalence and arithmetization-orientation. In addition, we propose two new standalone components that can be easily reused in new designs. One is a new S-box called Flystel, based on the well-studied butterfly structure, and the second is Jive -- a new mode of operation, inspired by the ``Latin dance'' symmetric algorithms (Salsa, ChaCha and derivatives). Our design is a conservative one: it uses a very classical Substitution-Permutation Network structure, and our detailed analysis of algebraic attacks highlights can be of independent interest.</p>
+								</li><br>
+
+								<li><b>Coefficient Grouping for Complex Affine Layers</b> - Crypto 2023<br>
+								<em> Fukang Liu, Lorenzo Grassi, Clémence Bouvier, Willi Meier, Takanori Isobe</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_coefgrouping'); return false;" >[abstract]</a>
+								<a href="https://doi.org/10.1007/978-3-031-38548-3_18">[Springer]</a>
+							  <a href="https://eprint.iacr.org/2023/782.pdf">[ePrint]</a>
+								<div id="abstract_coefgrouping" style="display:none;">
+								<br>
+								<p>
+									Designing symmetric-key primitives for applications in Fully Homomorphic Encryption (FHE) has become important to address the issue of the ciphertext expansion. In such a context, cryptographic primitives with a low-AND-depth decryption circuit are desired. Consequently, quadratic nonlinear functions are commonly used in these primitives, including the well-known $\chi$ function over $\mathbb{F}_2^n$
+							 		and the power map over a large finite field $\mathbb{F}_{p^n}$.
+									In this work, we study the growth of the algebraic degree for an SPN cipher over $\mathbb{F}_{2^n}^m$, whose S-box is defined as the combination of a power map $x \mapsto x^{2^d+1}$ and an $\mathbb{F}_2$-linearized affine polynomial $x \mapsto c_0 + \sum_{i=1}^w c_i x^{2^{h_i}}$ where
+									$c_1, \ldots, c_w \neq 0$.
+									Specifically, motivated by the fact that the original coefficient grouping technique published at EUROCRYPT 2023 becomes less efficient for $w > 1$, we develop a variant technique that can efficiently work for arbitrary $w$. With this new technique to study the upper bound of the algebraic degree, we answer the following questions from a theoretic perspective:<br>
+									1. can the algebraic degree increase exponentially when $w=1$?<br>
+							    2. what is the influence of $w$, $d$ and $(h_1, \ldots h_w)$ on the growth of the algebraic degree?<br>
+							    Based on this, we show (i) how to efficiently find $(h_1, \ldots h_w)$ to achieve the exponential growth of the algebraic degree and (ii) how to efficiently compute the upper bound of the algebraic degree for arbitrary $(h_1, \ldots h_w)$.
+							  	Therefore, we expect that these results can further advance the understanding of the design and analysis of such primitives.</p>
+								</li><br>
+								</ul>
+            </section>
+            <section>
+							<h2>International Conferences and Workshops</h2>
+
+								<ul>
+								<li><b>Iterated Power Functions: from Univariate Polynomial Representation to Multivariate Degree</b> - International Conference on Finite Fields and Their Applications, 2023<br>
+								<em>Clémence Bouvier, Anne Canteaut and Léo Perrin</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_fq2023'); return false;" >[abstract]</a>
+								<div id="abstract_fq2023" style="display:none;">
+								<br>
+								<p> Recently many symmetric primitives have been proposed for use in new
+									contexts, such as Multi-Party Computation or Zero-Knowledge Proofs. Our
+									aim is to investigate the security of MiMC against higher-order differential
+									attacks for which the complexity decreases with the multivariate degree. MiMC
+									consists of many iterations of a simple round function: the addition of a key and
+									round constants and a low-degree power permutation of $\mathbb{F}_{2^n}$, where $n \approx 129$.<br>
+									In light of previous work, we carefully study families of exponents appearing or not
+									in the univariate polynomial representation of the block cipher. For instance,
+									we show that for Gold function $x \mapsto x^d$, with $d = 2^j + 1$, the exponents are
+									necessary equal to 0 or 1 modulo $2^j$ , leading to very sparse polynomials for large
+									j. This observation then allows us to propose a more theoretical analysis of
+									the multivariate degree. Overall, we provide a detailed comparison of different
+									instances of MiMC and show that at least one fourth of the exponents never
+									appear in the univariate representation of the cipher. </p>
+								</li><br>
+
+								<li><b>Anemoi and Jive : New Arithmetization-Oriented tools for Plonk-based applications</b> - Zero-Knowledge Proofs, 2022<br>
+								<em>Clémence Bouvier, Danny Willems</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_zkproof2022'); return false;" >[abstract]</a>
+								<div id="abstract_zkproof2022" style="display:none;">
+								<br>
+								<p> In recent years, new symmetric primitives have been designed to be executed in abstract
+									contexts such as Zero-Knowledge (ZK) proof systems, widely used in crypto-currency
+									applications such as Zcash or Ethereum. In particular, these protocols have highlighted the
+									need to minimise the number of multiplications performed by the primitive in large finite
+									fields. As the number of the so-called Arithmetization-Oriented (AO) designs increases, e.g.
+									MiMC-Hash, Rescue–Prime, Poseidon, Reinforced Concrete and Griffin to name a
+									few, it is important to better understand the properties of their underlying operations.<br>
+									In this talk, we present a family of hash functions: Anemoi, exploiting a link, previously
+									unknown, between AO primitives and CCZ-equivalence. One of the main features that
+									set Anemoi apart from other such families is that it has been designed to be efficient
+									within multiple proof systems (R1CS, Plonk, AIR, etc.) but it has particularly competitive
+									performance for implementation in Plonk constraints (up to 29% constraint reduction in
+									standard Plonk over the most efficient existing primitive Griffin and 28%-48% over a
+									highly optimized Poseidon implementation with custom gates) as well as competitivenative performance, running between two and three times faster than Rescue–Prime,
+									depending on the field size.<br>
+									Besides pushing further the frontier in understanding the design principles behind
+									AO hash functions, we also offer two standalone components that can be easily reused
+									in new designs. Namely, we propose a new S-box, called Flystel and a new mode of
+									operation – Jive. We demonstrate that the CCZ-equivalence between the two variants of
+									the Flystel S-box, resp. the Open Flystel and the Closed Flystel, leads to competitive
+									performance and high security in ZK applications. As to the Jive mode of operation, it is
+									designed specifically for application in Merkle trees, where it offers significant improvement
+									in performance. As the name suggests, it is inspired by the “Latin dance” symmetric
+									algorithms (Salsa, ChaCha and derivatives).</p>
+								</li><br>
+
+								<li><b>New Approach for Arithmetization-Oriented Symmetric Primitives</b> - CrossFyre, 2022<br>
+								<em>Clémence Bouvier</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_crossfyre2022'); return false;" >[abstract]</a>
+								<div id="abstract_crossfyre2022" style="display:none;">
+								<br>
+								<p> In recent years, new symmetric primitives have been designed to be
+									executed in abstract contexts such as Zero-Knowledge (ZK) proof systems, widely
+									used in crypto-currency applications such as Bitcoin or Ethereum. In particular,
+									these protocols have highlighted the need to minimise the number of multiplications
+									performed by the primitive in large finite fields. As the number of the so-called
+									Arithmetization-Oriented (AO) designs increases, e.g. MiMC-Hash, Rescue–Prime,
+									Poseidon, Reinforced Concrete and Griffin to name a few, it is important to
+									better understand the properties of their underlying operations.<br>
+									After introducing the background and explaining the need to design new primitives,
+									we will present a new approach to ZK-friendliness. More precisely, we will propose a
+									family of hash functions: Anemoi, exploiting a link, previously unknown, between AO
+									primitives and CCZ-equivalence. One of the main features that set Anemoi apart from
+									other such families is that it has been designed to be efficient within multiple proof
+									systems (R1CS, Plonk, AIR, etc.) but it has particularly competitive performance for
+									implementation in Plonk constraints.<br>
+									Besides pushing further the frontier in understanding the design principles behind
+									AO hash functions, we also offer two standalone components that can be easily reused
+									in new designs. Our new S-box: the Flystel, is highly inspired by the well-studied
+									Butterfly structure. We will see how the CCZ-equivalence between its two variants
+									(the Open Flystel and the Closed Flystel) leads to good ZK performances and high
+									security level. We will also describe a new mode of operation for Merkle trees: Jive,
+									inspired by the “Latin dance” symmetric algorithms (Salsa, ChaCha and derivatives).</p>
+								</li><br>
+
+								<li><b>On the Algebraic Degree of Iterated Power Functions</b> - Workshop on Coding and Cryptography, 2022<br>
+								<em>Clémence Bouvier, Anne Canteaut and Léo Perrin</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_wcc2022'); return false;" >[abstract]</a>
+								<a href="https://www.wcc2022.uni-rostock.de/storages/uni-rostock/Tagungen/WCC2022/Papers/WCC_2022_paper_47.pdf">[extended-abstract]</a>
+								<div id="abstract_wcc2022" style="display:none;">
+								<br>
+								<p> New symmetric primitives intended to be run in abstract
+									settings such as multi-party computations are being designed to use operations over large finite fields. 
+									In this work, we investigate the algebraic
+									degree of one of the first such block ciphers, namely MiMC. 
+									It is composed of many iterations of a simple round function, which consists of
+									an addition and of a low-degree power permutation applied to the full
+									state, usually $x \mapsto x^3$ over a large field with characteristic 2. 
+									We show	that, while the univariate degree increases predictably with the number
+									of rounds, the algebraic degree has a much more complex behaviour, and
+									simply stays constant during some rounds. We present a full investigation of such plateaus that slightly slow down the growth of the algebraic
+									degree. Using these results, we slightly improve the higher-order differential attack presented by the authors of MiMC to cover one or two more
+									rounds. More importantly, our results provide some precise guarantee on
+									the algebraic degree of this cipher, and then on the minimal complexity
+									for a higher-order differential attack.</p>
+								</li><br>
+
+								</ul>
+
+            </section>
+            <section>
+							<h2>Preprints</h2>
+								
+								<ul>
+								<li><b>Exponential sums in linear cryptanalysis</b> - Article<br>
+								<em>Tim Beyne and Clémence Bouvier</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_expsums'); return false;" >[abstract]</a>
+								<a href="https://eprint.iacr.org/2024/1755.pdf">[ePrint]</a>
+								<div id="abstract_expsums" style="display:none;">
+								<br>
+								<p> It is shown how bounds on exponential sums derived from modern algebraic geometry, and l-adic cohomology specifically, 
+									can be used to upper bound the absolute correlations of linear approximations for cryptographic constructions of low algebraic degree. 
+									This is illustrated by applying results of Deligne, Denef and Loeser, and Rojas-León, to obtain correlation bounds for a generalization 
+									of the Butterfly construction, three-round Feistel ciphers, and a generalization of the Flystel construction. 
+									For each of these constructions, bounds obtained using other methods are significantly weaker. In the case of the Flystel construction, 
+									our bounds resolve a conjecture by the designers. <br>
+									Correlation bounds of this type are relevant for the development of security arguments against linear cryptanalysis, especially in the 
+									weak-key setting or for primitives that do not involve a key. Since the methods used in this paper are applicable to constructions defined 
+									over arbitrary finite fields, the results are also relevant for arithmetization-oriented primitives such as Anemoi, which uses S-boxes 
+									based on the Flystel construction.</p>
+								</li><br>
+
+								<li><b>Linear approximations of the Flystel construction</b> - Note<br>
+								<em>Tim Beyne and Clémence Bouvier</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_flystel'); return false;" >[abstract]</a>
+								<a href="https://eprint.iacr.org/2024/1465.pdf">[ePrint]</a>
+								<div id="abstract_flystel" style="display:none;">
+								<br>
+								<p> Using a purity theorem for exponential sums due to Rojas-Léon, we upper bound the absolute correlations 
+								of linear approximations of the Flystel construction used in Anemoi. 
+								This resolves open problem 7.1 in [Bouvier, 2023].</p>
+								</li><br>
+
+								<li><b>Practical Algebraic Attacks against some Arithmetization-oriented Hash Functions</b> - Report<br>
+								<em>Augustin Bariant, Clémence Bouvier, Gaëtan Leurent and Léo Perrin</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_ethereum'); return false;" >[abstract]</a>
+								<a href="https://hal.inria.fr/hal-03518757">[HAL-Inria]</a>
+								<div id="abstract_ethereum" style="display:none;">
+								<br>
+								<p> Several challenges have been announced on arithmetization-oriented hash
+								functions, with bounties funded by the Ethereum Foundation. In this note, we report
+								on our work to solve several of these challenges, on Feistel-MiMC, Rescue Prime and
+								Poseidon.
+								Our results are obtained by writing the challenges as systems of polynomial equations
+								over the large field, and solving them with off-the-shelf tools (SageMath, NTL, Magma).</p>
+								</li><br>
+								</ul>
+            </section>
+            <section>
+							<h2>Thesis</h2>
+
+								<ul>
+								<li><b>Cryptanalysis and design of symmetric primitives defined over large finite fields</b> - PhD thesis<br>
+								<em>Clémence Bouvier</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_phd'); return false;" >[abstract]</a>
+								<a href="https://inria.hal.science/tel-04327955">[HAL-Inria]</a>
+								<div id="abstract_phd" style="display:none;">
+								<br>
+								<p> 
+								In recent years, new symmetric cryptographic primitives have been proposed for advanced protocols, like multi-party computation, in combination with a fully homomorphic encryption or in various systems of zero-knowledge proofs. Such protocols are parts of a context marked by the development of cloud and blockchain technologies, and must therefore respond to the growing security concerns of users. <br>
+								These protocols have put forward the need to minimize the number of multiplications performed by the primitive in large finite fields.
+								Classical symmetric algorithms are then inappropriate in this context and the new cryptographic protocols must be combined with symmetric primitives (encryption or hash function) with particular properties. <br>
+								While the number of designs defined over large fields, called “arithmetization-oriented”, is increasing significantly, few cryptanalysis works have been proposed. 
+								The first aim of this manuscript is then to contribute to fill this gap, and hence to better understand the specificities of these new objects. We also propose a new vision to design such primitives, covering both aspects of cryptology, the cryptography and the cryptanalysis. </p>
+								</li><br>
+
+								<li><b>Analyse de la sécurité de primitives symétriques dédiées à diverses techniques de preuves</b> - Master thesis<br>
+								<em>Clémence Bouvier</em><br>
+								<a href="https://hal.inria.fr/hal-03136157">[HAL-Inria]</a></li>
+								</ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
