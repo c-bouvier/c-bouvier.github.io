@@ -278,6 +278,20 @@
 							<h2>Preprints</h2>
 								
 								<ul>
+								<li><b>Skyscraper: Fast Hashing on Big Primes</b> - Article (accepted to TCHES)<br>
+								<em>Clémence Bouvier, Lorenzo Grassi, Dmitry Khovratovich, Katharina Koschatko, Christian Rechberger, Fabian Schmid and Markus Schofnegger</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_skyscraper'); return false;" >[abstract]</a>
+								<a href="https://eprint.iacr.org/2025/058.pdf">[ePrint]</a>
+								<div id="abstract_skyscraper" style="display:none;">
+								<br>
+								<p> Arithmetic hash functions defined over prime fields have been actively developed and used in verifiable computation (VC) protocols. Among those, elliptic-curve-based SNARKs require large (-bit and higher) primes. Such hash functions are notably slow, losing a factor of up to  compared to regular constructions like SHA-2/3.<br>
+								In this paper, we present the hash function , which is aimed at large prime fields and provides major improvements compared to  and . First, the design is exactly the same for all large primes, which simplifies analysis and deployment. Secondly, it achieves a performance comparable to cryptographic hash standards by using low-degree non-invertible transformations and minimizing modulo reductions. Concretely, it hashes two -bit prime field (BLS12-381 curve scalar field) elements in  nanoseconds, whereas SHA-256 needs  nanoseconds on the same machine.<br>
+								The low circuit complexity of , together with its high native speed, should allow a substantial reduction in many VC scenarios, particularly in recursive proofs. </p>
+								</li><br>
+
+
+
+
 								<li><b>Exponential sums in linear cryptanalysis</b> - Article<br>
 								<em>Tim Beyne and Clémence Bouvier</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_expsums'); return false;" >[abstract]</a>
