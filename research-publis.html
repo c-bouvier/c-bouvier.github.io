@@ -52,6 +52,18 @@
 							<h2>International Journals</h2>
 
 								<ul>
+								<li><b>Skyscraper: Fast Hashing on Big Primes</b> - IACR Transactions on Cryptographic Hardware and Embedded Systems, 2025(2)<br>
+								<em>Clémence Bouvier, Lorenzo Grassi, Dmitry Khovratovich, Katharina Koschatko, Christian Rechberger, Fabian Schmid and Markus Schofnegger</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_skyscraper'); return false;" >[abstract]</a>
+								<a href="https://eprint.iacr.org/2025/058.pdf">[ePrint]</a>
+								<a href="https://tches.iacr.org/index.php/TCHES/article/view/12064/11908">[TCHES]</a>
+								<div id="abstract_skyscraper" style="display:none;">
+								<br>
+								<p> Arithmetic hash functions defined over prime fields have been actively developed and used in verifiable computation (VC) protocols. Among those, elliptic-curve-based SNARKs require large (256-bit and higher) primes. Such hash functions are notably slow, losing a factor of up to 1000 compared to regular constructions like SHA-2/3.<br>
+								In this paper, we present the hash function Skyscraper, which is aimed at large prime fields and provides major improvements compared to Reinforced Concrete and Monolith. First, the design is exactly the same for all large primes, which simplifies analysis and deployment. Secondly, it achieves a performance comparable to cryptographic hash standards by using low-degree non-invertible transformations and minimizing modulo reductions. Concretely, it hashes two 256-bit prime field (BLS12-381 curve scalar field) elements in  nanoseconds, whereas SHA-256 needs 42 nanoseconds on the same machine.<br>
+								The low circuit complexity of Skyscraper, together with its high native speed, should allow a substantial reduction in many VC scenarios, particularly in recursive proofs. </p>
+								</li><br>
+
 								<li><b>On the Algebraic Degree of Iterated Power Functions</b> - Designs, Codes and Cryptography, 2023<br>
 								<em>Clémence Bouvier, Anne Canteaut and Léo Perrin</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_dcc2022'); return false;" >[abstract]</a>
@@ -278,21 +290,7 @@
 							<h2>Preprints</h2>
 								
 								<ul>
-								<li><b>Skyscraper: Fast Hashing on Big Primes</b> - Article (accepted to TCHES)<br>
-								<em>Clémence Bouvier, Lorenzo Grassi, Dmitry Khovratovich, Katharina Koschatko, Christian Rechberger, Fabian Schmid and Markus Schofnegger</em><br>
-								<a href="" onclick="javascript:visibilite('abstract_skyscraper'); return false;" >[abstract]</a>
-								<a href="https://eprint.iacr.org/2025/058.pdf">[ePrint]</a>
-								<div id="abstract_skyscraper" style="display:none;">
-								<br>
-								<p> Arithmetic hash functions defined over prime fields have been actively developed and used in verifiable computation (VC) protocols. Among those, elliptic-curve-based SNARKs require large (256-bit and higher) primes. Such hash functions are notably slow, losing a factor of up to 1000 compared to regular constructions like SHA-2/3.<br>
-								In this paper, we present the hash function Skyscraper, which is aimed at large prime fields and provides major improvements compared to Reinforced Concrete and Monolith. First, the design is exactly the same for all large primes, which simplifies analysis and deployment. Secondly, it achieves a performance comparable to cryptographic hash standards by using low-degree non-invertible transformations and minimizing modulo reductions. Concretely, it hashes two 256-bit prime field (BLS12-381 curve scalar field) elements in  nanoseconds, whereas SHA-256 needs 42 nanoseconds on the same machine.<br>
-								The low circuit complexity of Skyscraper, together with its high native speed, should allow a substantial reduction in many VC scenarios, particularly in recursive proofs. </p>
-								</li><br>
-
-
-
-
-								<li><b>Exponential sums in linear cryptanalysis</b> - Article<br>
+								<li><b>Exponential sums in linear cryptanalysis</b> - Article, 2024<br>
 								<em>Tim Beyne and Clémence Bouvier</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_expsums'); return false;" >[abstract]</a>
 								<a href="https://eprint.iacr.org/2024/1755.pdf">[ePrint]</a>
@@ -310,7 +308,7 @@
 									based on the Flystel construction.</p>
 								</li><br>
 
-								<li><b>Linear approximations of the Flystel construction</b> - Note<br>
+								<li><b>Linear approximations of the Flystel construction</b> - Note, 2024<br>
 								<em>Tim Beyne and Clémence Bouvier</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_flystel'); return false;" >[abstract]</a>
 								<a href="https://eprint.iacr.org/2024/1465.pdf">[ePrint]</a>
@@ -321,7 +319,7 @@
 								This resolves open problem 7.1 in [Bouvier, 2023].</p>
 								</li><br>
 
-								<li><b>Practical Algebraic Attacks against some Arithmetization-oriented Hash Functions</b> - Report<br>
+								<li><b>Practical Algebraic Attacks against some Arithmetization-oriented Hash Functions</b> - Report, 2022<br>
 								<em>Augustin Bariant, Clémence Bouvier, Gaëtan Leurent and Léo Perrin</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_ethereum'); return false;" >[abstract]</a>
 								<a href="https://hal.inria.fr/hal-03518757">[HAL-Inria]</a>
@@ -340,7 +338,7 @@
 							<h2>Thesis</h2>
 
 								<ul>
-								<li><b>Cryptanalysis and design of symmetric primitives defined over large finite fields</b> - PhD thesis<br>
+								<li><b>Cryptanalysis and design of symmetric primitives defined over large finite fields</b> - PhD thesis, 2023<br>
 								<em>Clémence Bouvier</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_phd'); return false;" >[abstract]</a>
 								<a href="https://inria.hal.science/tel-04327955">[HAL-Inria]</a>
@@ -354,7 +352,7 @@
 								The first aim of this manuscript is then to contribute to fill this gap, and hence to better understand the specificities of these new objects. We also propose a new vision to design such primitives, covering both aspects of cryptology, the cryptography and the cryptanalysis. </p>
 								</li><br>
 
-								<li><b>Analyse de la sécurité de primitives symétriques dédiées à diverses techniques de preuves</b> - Master thesis<br>
+								<li><b>Analyse de la sécurité de primitives symétriques dédiées à diverses techniques de preuves</b> - Master thesis, 2020<br>
 								<em>Clémence Bouvier</em><br>
 								<a href="https://hal.inria.fr/hal-03136157">[HAL-Inria]</a></li>
 								</ul>
