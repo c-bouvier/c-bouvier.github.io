@@ -21,6 +21,11 @@
 </head>
 <body>
     <div class="container-wrapper">
+    	  <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('nav-open')">
+		    <span></span>
+		    <span></span>
+		    <span></span>
+		  </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
@@ -39,8 +44,6 @@
                 <a href="outreach-others.html">Other activities</a>
             </div>
             <a href="creations.html">Logo creations</a>
-
-            <p class="copyright">© 2025 Clémence Bouvier. All rights reserved.</p>
         </nav>
         <main>
             <header>
@@ -157,7 +160,7 @@
 								</li><br>
 
 								<li><b>Coefficient Grouping for Complex Affine Layers</b> - Crypto 2023<br>
-								<em> Fukang Liu, Lorenzo Grassi, Clémence Bouvier, Willi Meier, Takanori Isobe</em><br>
+								<em> Fukang Liu, Lorenzo Grassi, Clémence Bouvier, Willi Meier and Takanori Isobe</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_coefgrouping'); return false;" >[abstract]</a>
 								<a href="https://doi.org/10.1007/978-3-031-38548-3_18">[Springer]</a>
 							  <a href="https://eprint.iacr.org/2023/782.pdf">[ePrint]</a>
@@ -180,6 +183,25 @@
 							<h2>International Conferences and Workshops</h2>
 
 								<ul>
+								<li><b>Statistical properties of Butterfly-like constructions</b> - International Conference on Finite Fields and Their Applications, 2025<br>
+								<em>Clémence Bouvier</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_fq2025'); return false;" >[abstract]</a>
+								<div id="abstract_fq2025" style="display:none;">
+								<br>
+								<p> The Butterfly construction was originally introduced over binary fields $F_{2^n}^2$ for odd $n$.
+									Since then, various variants have been explored, including the Flystel, defined over both
+									binary and prime fields, and proposed as a non-linear building block in Anemoi, a family of
+									hash functions designed for zero-knowledge applications. In this context, understanding the
+									differential and linear properties of internal components is crucial to assess the resistance
+									of the overall construction to statistical attacks. While a bound was established for the
+									differential properties of the Flystel construction, its linear behavior remained a conjecture.
+									A recent breakthrough showed that bounds on exponential sums can provide valuable
+									insights into the resistance of Flystel-like constructions to linear cryptanalysis, solving the
+									conjecture. In this talk, we present a classification of Butterfly-like constructions based on
+									their statistical properties. This work extends initial investigations, and offers new
+									perspectives on the cryptographic potential and limitations of these designs. </p>
+								</li><br>
+
 								<li><b>Iterated Power Functions: from Univariate Polynomial Representation to Multivariate Degree</b> - International Conference on Finite Fields and Their Applications, 2023<br>
 								<em>Clémence Bouvier, Anne Canteaut and Léo Perrin</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_fq2023'); return false;" >[abstract]</a>
@@ -202,7 +224,7 @@
 								</li><br>
 
 								<li><b>Anemoi and Jive : New Arithmetization-Oriented tools for Plonk-based applications</b> - Zero-Knowledge Proofs, 2022<br>
-								<em>Clémence Bouvier, Danny Willems</em><br>
+								<em>Clémence Bouvier and Danny Willems</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_zkproof2022'); return false;" >[abstract]</a>
 								<div id="abstract_zkproof2022" style="display:none;">
 								<br>
@@ -357,6 +379,8 @@
 								<a href="https://hal.inria.fr/hal-03136157">[HAL-Inria]</a></li>
 								</ul>
             </section>
+
+         <p class="copyright">© 2025 Clémence Bouvier. All rights reserved.</p>           
         </main>
     </div>
 </body>

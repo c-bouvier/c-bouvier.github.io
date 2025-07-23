@@ -36,13 +36,6 @@ nav {
     position: relative; /* Positionner les éléments enfants correctement */
 }
 
-nav .copyright {
-    font-size: 12px; /* Taille de texte réduite */
-    color: var(--title-color); /* Couleur discrète */
-    text-align: center; /* Centrer le texte */
-    margin-top: 90px; /* Espacement au-dessus de la phrase */
-}
-
 nav a {
     color: #eaeaea;
     text-decoration: none;
@@ -59,6 +52,45 @@ nav a:hover {
     display: flex; /* Toujours visible */
     flex-direction: column;
     padding-left: 1rem; /* Décalage pour identifier les sous-éléments */
+}
+
+.menu-toggle {
+    display: none; /* Affiché selon les besoins */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    margin: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .container-wrapper {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        display: none; /* Caché par défaut */
+        height: auto;
+        box-shadow: none;
+    }
+
+    nav.nav-open {
+        display: flex; /* Affiche quand nav a .nav-open */
+    }
+
+    .menu-toggle {
+        display: flex; /* Affiché en mobile */
+    }
 }
 
 main {
@@ -197,4 +229,11 @@ ul li::before {
     margin: 10px;
     max-width: 100%;
     height: auto;
+}
+
+.copyright {
+    font-size: 12px; /* Taille de texte réduite */
+    color: var(--title-color); /* Couleur discrète */
+    text-align: center; /* Centrer le texte */
+    margin-top: 90px; /* Espacement au-dessus de la phrase */
 }
