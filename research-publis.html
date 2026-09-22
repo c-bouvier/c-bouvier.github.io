@@ -332,6 +332,37 @@
 							<h2>Preprints</h2>
 								
 								<ul>
+								<li><b>On the Cryptanalysis of Arithmetization-Oriented Hash Functions: What do We Know?</b> - Report, 2026 (to appear)<br>
+								<em>Tomer Ashur, Magali Bardet, Amit Singh Bhati, Aurélien Boeuf, Clémence Bouvier, Orr Dunkelman, Lorenzo Grassi, Katharina Koschatko, 
+								Léo Perrin, Christian Rechberger, Arnab Roy, Markus Shofnegger, Morten Øygarden and Sundas Tariq</em><br>
+								</li><br>
+
+								<li><b>SoK: Zero-Knowledge Friendly Hash Functions over Prime Fields</b> - Article, 2026<br>
+								<em>Clémence Bouvier, Lorenzo Grassi, Katharina Koschatko, Christian Rechberger, Fabian Schmid, Matthias Johann Steiner, Zhuo Wu and Hailun Yan</em><br>
+								<a href="" onclick="javascript:visibilite('abstract_sok'); return false;" >[abstract]</a>
+								<a href="https://eprint.iacr.org/2026/1931.pdf">[ePrint]</a>
+								<div id="abstract_sok" style="display:none;">
+								<br>
+								<p> Zero-Knowledge (ZK) proof systems have become a cornerstone of privacy-
+									preserving technologies and blockchain scalability. However, traditional hash functions
+									are often inefficient within ZK protocols due to their high constraint complexity in
+									arithmetic circuits. While various ZK-friendly hash functions have been proposed
+									to address this bottleneck, their diverse algebraic structures and varying security
+									margins make it difficult for practitioners to select the optimal primitive.<br>
+									We conduct a systematic survey of ZK-friendly hash functions, covering both
+									algorithmic design paradigms and modes of operation. We consolidate the relevant
+									algebraic cryptanalysis techniques and review the third-party cryptanalysis of each
+									design. For parameter sets broken by the best known attacks, we estimate the
+									minimum number of rounds needed to withstand them – not as new recommendations,
+									but to bring all constructions to a comparable level. On this basis, we analyze each
+									construction across different arithmetization styles (R1CS, AIR, PLONK), both
+									theoretically, by deriving the underlying constraint or gate counts, and empirically,
+									through extensive benchmarks.<br>
+									This paper comes with a fully open-source implementation suite comprising
+									a SageMath/Python reference framework, native Rust implementations, in-circuit
+									implementations, and a reusable TikZ figure library.</p>
+								</li><br>
+
 								<li><b>Linear approximations of the Flystel construction</b> - Note, 2024<br>
 								<em>Tim Beyne and Clémence Bouvier</em><br>
 								<a href="" onclick="javascript:visibilite('abstract_flystel'); return false;" >[abstract]</a>
